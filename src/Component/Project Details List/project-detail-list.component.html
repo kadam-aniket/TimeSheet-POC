@@ -1,0 +1,32 @@
+<div class="col-md-7">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+              <th> </th>
+              <th> </th>
+              <th>Project Name</th>
+              <th>Manager Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let projectdetail of service.ProjectDetailslist">
+                <td (click)="onDelete(projectdetail.ProjectId)">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </td>
+                
+                <td (click)="populateForm(projectdetail)">
+                    <span class="glyphicon glyphicon-edit"></span>
+                </td>
+                
+                <td>
+                    {{ projectdetail.ProjectName }}
+                </td>
+                
+                <td>
+                    {{ projectdetail.ProjectManager }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
