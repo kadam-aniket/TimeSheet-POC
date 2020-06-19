@@ -1,0 +1,21 @@
+<div class="container" >
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand active" routerLink="home">Time Sheet Portal</a>
+      </div>
+      <ul class="nav navbar-nav">
+       <!-- <li class="active"><a href="#">Home</a></li>  -->
+        <li><a routerLink="user">Users</a></li>
+        <li><a routerLink="project">Projects</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="login"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  
+  <router-outlet></router-outlet>
+</div>
