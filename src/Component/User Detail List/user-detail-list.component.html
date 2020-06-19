@@ -1,0 +1,31 @@
+<div class="container">
+<table class="table table-hover">
+    <thead>
+        <tr>
+          <th> </th>
+          <th> </th>
+          <th>Username</th>
+          <th>UserAddress</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let userdetail of service.list">
+            <td (click)="onDelete(userdetail.UserId)">
+                <span class="glyphicon glyphicon-trash"></span>
+            </td>
+            
+            <td (click)="populateForm(userdetail)">
+                <span class="glyphicon glyphicon-edit"></span>
+            </td>
+            
+            <td (click)="populateForm(userdetail)">
+                {{ userdetail.UserName }}
+            </td>
+            
+            <td (click)="populateForm(userdetail)">
+                {{ userdetail.UserAddress }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
