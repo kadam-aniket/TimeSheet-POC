@@ -1,0 +1,49 @@
+<h3 >Assign a Project to User</h3>
+<br/>
+<div class="row">
+<form [formGroup]="formData" (ngSubmit)="onSubmit(formData)">
+    <div class="form-group col-md-7">
+        <label>User Name</label>
+        <select class="form-control" >
+            <option *ngFor = "let userdetail of service1.list; let i index" [value]="userdetail.id">
+                {{ userdetail.UserName }}
+            </option>
+        </select>
+    </div>
+    
+    <div class="form-group col-md-7">
+        <label>Project Name</label>
+        <select class="form-control" >
+            <option *ngFor = "let projectdetail of service2.ProjectDetailslist; let i index" [value]="projectdetail.id">
+                {{projectdetail.ProjectName}}
+            </option>
+        </select>
+    </div>
+
+    <div class="form-group col-md-7">
+        <button type="submit" class="btn btn-success" [disabled]="!formData.valid" >Save</button>
+    </div>
+</form>
+</div>
+
+<div class="col-md-7">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Project Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr >
+                <td >
+                    Aniket
+                </td>
+                
+                <td >
+                    Ungerboeck
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
